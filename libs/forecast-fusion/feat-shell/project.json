@@ -1,0 +1,21 @@
+{
+  "name": "ghx-marketplace-feat-shell",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/ghx-marketplace/feat-shell/src",
+  "prefix": "ff",
+  "tags": ["scope:ghx-marketplace", "type:feat"],
+  "projectType": "library",
+  "targets": {
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/ghx-marketplace/feat-shell/jest.config.ts"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    }
+  }
+}

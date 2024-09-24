@@ -1,0 +1,35 @@
+.user-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  background-color: #008cba;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #005f73;
+  }
+}
+
+.centered-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0 0 0;
+  gap: 10px;
+  text-align: center;
+}
+
+.centered-toggle h3 {
+  margin: 0; /* Removes default margin to help with centering */
+}

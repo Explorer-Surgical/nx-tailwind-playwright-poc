@@ -1,0 +1,73 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "es2015",
+    "module": "esnext",
+    "lib": ["es2020", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@angular-enterprise-stack/ghx-marketplace/data-access": [
+        "libs/ghx-marketplace/data-access/src/index.ts"
+      ],
+      "@angular-enterprise-stack/ghx-marketplace/feat-list": [
+        "libs/ghx-marketplace/feat-list/src/index.ts"
+      ],
+      "@angular-enterprise-stack/ghx-marketplace/feat-search": [
+        "libs/ghx-marketplace/feat-search/src/index.ts"
+      ],
+      "@angular-enterprise-stack/ghx-marketplace/feat-shell": [
+        "libs/ghx-marketplace/feat-shell/src/index.ts"
+      ],
+      "@angular-enterprise-stack/my-portfolio/data-access": [
+        "libs/my-portfolio/data-access/src/index.ts"
+      ],
+      "@angular-enterprise-stack/my-portfolio/shell": [
+        "libs/my-portfolio/shell/src/index.ts"
+      ],
+      "@angular-enterprise-stack/my-portfolio/types": [
+        "libs/my-portfolio/types/src/index.ts"
+      ],
+      "@angular-enterprise-stack/my-portfolio/ui": [
+        "libs/my-portfolio/ui/src/index.ts"
+      ],
+      "@angular-enterprise-stack/shared/angular": [
+        "libs/shared/angular/src/index.ts"
+      ],
+      "@angular-enterprise-stack/shared/ngrx": [
+        "libs/shared/ngrx/src/index.ts"
+      ],
+      "@angular-enterprise-stack/shared/ui-design-system": [
+        "libs/shared/ui-design-system/src/index.ts"
+      ],
+      "@angular-enterprise-stack/user-sync-tool/data-access": [
+        "libs/user-sync-tool/data-access/src/index.ts"
+      ],
+      "@angular-enterprise-stack/user-sync-tool/feat-favourite": [
+        "libs/user-sync-tool/feat-favourite/src/index.ts"
+      ],
+      "@angular-enterprise-stack/user-sync-tool/feat-random-users": [
+        "libs/user-sync-tool/feat-random-users/src/index.ts"
+      ],
+      "@angular-enterprise-stack/user-sync-tool/feat-shell": [
+        "libs/user-sync-tool/feat-shell/src/index.ts"
+      ],
+      "@angular-enterprise-stack/user-sync-tool/types": [
+        "libs/user-sync-tool/types/src/index.ts"
+      ],
+      "@angular-enterprise-stack/user-sync-tool/ui": [
+        "libs/user-sync-tool/ui/src/index.ts"
+      ]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

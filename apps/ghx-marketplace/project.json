@@ -1,0 +1,82 @@
+{
+  "name": "ghx-marketplace",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "prefix": "ff",
+  "sourceRoot": "apps/ghx-marketplace/src",
+  "tags": ["scope:ghx-marketplace", "type:app"],
+  "targets": {
+    "build": {
+      "executor": "@angular-devkit/build-angular:browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/ghx-marketplace",
+        "index": "apps/ghx-marketplace/src/index.html",
+        "main": "apps/ghx-marketplace/src/main.ts",
+        "polyfills": ["zone.js"],
+        "tsConfig": "apps/ghx-marketplace/tsconfig.app.json",
+        "assets": [
+          "apps/ghx-marketplace/src/favicon.ico",
+          "apps/ghx-marketplace/src/assets"
+        ],
+        "styles": ["apps/ghx-marketplace/src/styles.scss"],
+        "scripts": []
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "outputHashing": "all"
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@angular-devkit/build-angular:dev-server",
+      "configurations": {
+        "production": {
+          "buildTarget": "ghx-marketplace:build:production"
+        },
+        "development": {
+          "buildTarget": "ghx-marketplace:build:development"
+        }
+      },
+      "defaultConfiguration": "development"
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "buildTarget": "ghx-marketplace:build"
+      }
+    },
+    "lint": {
+      "executor": "@nx/eslint:lint",
+      "outputs": ["{options.outputFile}"]
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/ghx-marketplace/jest.config.ts"
+      }
+    }
+  }
+}
